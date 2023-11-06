@@ -9,7 +9,7 @@ IPSec VPN的安装主要分三个步骤：
 
 ### 初始化配置服务器
 1. 创建VPN账户
-    - root用户登陆后创建一个专门用于VPN配置的用户，并赋予XX权限
+    - root用户登陆后创建一个专门用于VPN配置的用户，并赋予"AmazonEC2FullAccess", "AmazonRoute53FullAccess"和"AmazonVPCFullAccess"权限
     - 退出root用户，用刚创建的专门用于VPN的用户登陆AWS
 2. 创建EC2实例，
     - 选Linux的Debian版本
@@ -49,3 +49,6 @@ IPSec VPN的安装主要分三个步骤：
 8. 如果屏幕出现“IKEv2 configuration successful imported”，表示客户端运行成功。
 9. 单击系统托盘中的无线/网络图标，选择新的“VPN 连接”，然后单击“连接”。
 10. 连接成功后，你可以到[这里](https://www.ipchicken.com/) 检测你的 IP 地址，应该显示为你的 AWS EC2的Public IP
+
+### 参考文档
+https://github.com/hwdsl2/setup-ipsec-vpn/blob/master/README-zh.md
